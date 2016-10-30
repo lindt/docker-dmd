@@ -45,9 +45,8 @@ RUN apt-get update \
  && chmod +x /usr/local/bin/gosu \
  && gosu nobody true \
  && apt-get auto-remove -y wget \
- && rm -rf /var/lib/apt/lists/*
-
-RUN chmod 755 -R /dlang
+ && rm -rf /var/lib/apt/lists/* \
+ && chmod 755 -R /dlang
 
 COPY entrypoint.sh /
 RUN chmod +x /entrypoint.sh
