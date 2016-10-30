@@ -1,0 +1,2 @@
+#!/bin/bash
+curl -fqs http://downloads.dlang.org/releases/2.x/ | grep 'li.*href.*release' | cut -d '>' -f 3 | cut -d '<' -f 1 | sort
