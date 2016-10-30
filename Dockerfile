@@ -4,7 +4,7 @@ MAINTAINER Stefan Rohe <think@hotmail.de>
 
 ENV \
   COMPILER=dmd \
-  COMPILER_VERSION=2.002
+  COMPILER_VERSION=2.003
 
 RUN apt-get update && apt-get install -y curl build-essential \
  && curl -fsS -o /tmp/install.sh https://dlang.org/install.sh \
