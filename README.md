@@ -25,6 +25,14 @@ Allows to use all major D Compilers without installation.
 ## Usage
 
 Place a `test.d` in your current directory.
+```
+import std.stdio;
+
+void main() {
+    writeln("Hello, World!");
+}
+```
+
 Then execute
 ```
 docker run --rm -ti \
@@ -32,4 +40,9 @@ docker run --rm -ti \
   -w $(pwd) \
   -v /home/$USER:/home/$USER \
   dlanguage/dmd dmd -run test.d
+```
+
+This should plot:
+```
+Hello, World!
 ```
