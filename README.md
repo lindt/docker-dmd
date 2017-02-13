@@ -35,11 +35,7 @@ void main() {
 
 Then execute
 ```
-docker run --rm -ti \
-  -e USER -e HOME -e LOCAL_USER_ID=`id -u $USER` -e LOCAL_GROUP_ID=`id -g $USER` \
-  -w $(pwd) \
-  -v /home/$USER:/home/$USER \
-  dlanguage/dmd dmd -run test.d
+docker run --rm -ti -v $(pwd):/src dlanguage/dmd dmd -run test.d
 ```
 
 This should plot:
