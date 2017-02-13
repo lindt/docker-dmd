@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y curl build-essential \
  && rm -rf /dlang/dub-1.0.0/dub.tar.gz
 
 ENV \
-  PATH=/dlang/${COMPILER}-${COMPILER_VERSION}/linux/bin64:${PATH} \
+  PATH=/dlang/dub:/dlang/${COMPILER}-${COMPILER_VERSION}/linux/bin64:${PATH} \
   LD_LIBRARY_PATH=/dlang/${COMPILER}-${COMPILER_VERSION}/linux/lib64 \
   LIBRARY_PATH=/dlang/${COMPILER}-${COMPILER_VERSION}/linux/lib64 \
   PS1="(${COMPILER}-${COMPILER_VERSION}) \\u@\\h:\\w\$"
