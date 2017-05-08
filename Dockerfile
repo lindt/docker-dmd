@@ -6,7 +6,7 @@ ENV \
   COMPILER=dmd \
   COMPILER_VERSION=2.073.2
 
-RUN apt-get update && apt-get install -y curl build-essential \
+RUN apt-get update && apt-get install -y curl libcurl3 build-essential \
  && curl -fsS -o /tmp/install.sh https://dlang.org/install.sh \
  && bash /tmp/install.sh -p /dlang install -s "${COMPILER}-${COMPILER_VERSION}" \
  && rm /tmp/install.sh \
