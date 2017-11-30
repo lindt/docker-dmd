@@ -4,7 +4,7 @@ MAINTAINER Stefan Rohe <think@hotmail.de>
 
 ENV \
   COMPILER=dmd \
-  COMPILER_VERSION=2.077.0
+  COMPILER_VERSION=2.077.1
 
 RUN apt-get update && apt-get install -y curl libcurl3 build-essential \
  && curl -fsS -o /tmp/install.sh https://dlang.org/install.sh \
