@@ -34,7 +34,7 @@ void main() {
 ```
 
 Then execute
-```
+```sh
 docker run --rm -ti -v $(pwd):/src dlanguage/dmd dmd -run test.d
 ```
 
