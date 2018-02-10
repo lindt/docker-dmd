@@ -42,3 +42,9 @@ This should plot:
 ```
 Hello, World!
 ```
+
+If you are too lazy to create a file, you can compile directly from stdin:
+
+```sh
+echo 'void main(){import std.stdio; writeln("Hello World");}' | docker run --rm -i -v $(pwd):/src dlanguage/dmd dmd -run -
+```
